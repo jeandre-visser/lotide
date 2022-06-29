@@ -9,16 +9,16 @@ const assertEqual = function(actual, expected) {
 const countLetters = function(str) {
   let letterCounter = {};
 
-  for (let letter of str) {
-    if (letter !== " ") {
-      letterCounter[letter] = letterCounter[letter] + 1;
-    } else if (letter === " ") {
-      letterCounter[letter] = letterCounter[letter] = 1;
+  let newStr = str.replace(/\s+/g, '');
+  for (let letter of newStr) {
+    if (letterCounter[letter]) {
+      letterCounter[letter]++;
+    } else {
+      letterCounter[letter] = 1;
     }
   }
   return letterCounter;
 };
-
 
 // TEST CASES
 console.log(countLetters("LHL"));
