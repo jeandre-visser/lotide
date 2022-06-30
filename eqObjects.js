@@ -25,7 +25,13 @@ const eqObjects = function(obj1, obj2) {
     return false;
   }
   for (let key of keyArr1) {
-    if (obj1[key] === obj2[key]) {
+
+    if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) {
+      return eqArrays(obj1[key], obj2[key]);
+    }
+
+
+    if (obj1[key] !== obj2[key]) {
       return false;
     }
   }
@@ -33,13 +39,7 @@ const eqObjects = function(obj1, obj2) {
   return true;
 }
 
-
-
-
-
-
-
-
+// TEST CASES
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 console.log(eqObjects(ab, ba)); // => true
