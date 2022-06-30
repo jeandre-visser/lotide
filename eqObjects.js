@@ -30,14 +30,13 @@ const eqObjects = function(obj1, obj2) {
       return eqArrays(obj1[key], obj2[key]);
     }
 
-
     if (obj1[key] !== obj2[key]) {
       return false;
     }
   }
 
   return true;
-}
+};
 
 // TEST CASES
 const ab = { a: "1", b: "2" };
