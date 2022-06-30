@@ -12,17 +12,18 @@ const eqArrays = function(arr1, arr2) {
 
 const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1, arr2)) {
-    console.log(`✅Assertion Passed: ${arr1} === ${arr2}`);
-  } else {
-    console.log(`❌Assertion Failed: ${arr1} !== ${arr2}`);
+    return console.log(`✅Assertion Passed: ${arr1} === ${arr2}`);
   }
+  return console.log(`❌Assertion Failed: ${arr1} !== ${arr2}`);
 };
 
 
 const letterPositions = function(sentence) {
   const results = {};
   
-  sentence.split("").forEach(letter => {results[letter] = []});
+  sentence.split("").forEach(letter => {
+    results[letter] = []
+  });
 
   for (let i = 0; i < sentence.length; i++) {
     results[sentence[i]].push(i);
