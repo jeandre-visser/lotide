@@ -20,7 +20,9 @@ const assertArraysEqual = function(arr1, arr2) {
 const flatten = function(arr) {
   let flattenedArr = [];
   for (let element of arr) {
+    // Determine if the element is an array
     if (Array.isArray(element)) {
+      // if it is an array, then loop through each nestedElement in the array element and push it into our flattenedArr
       for (let nestedElement of element) {
         flattenedArr.push(nestedElement);
       }
