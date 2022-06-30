@@ -22,16 +22,12 @@ const assertArraysEqual = function(arr1, arr2) {
 const letterPositions = function(sentence) {
   const results = {};
   
-  
+  sentence.split("").forEach(letter => {results[letter] = []});
+
   for (let i = 0; i < sentence.length; i++) {
-    if (sentence[i] !== " ") {
-      if (results[sentence[i]]) {
-        results[sentence[i]].push(i);
-      } else {
-        results[sentence[i]] = [i];
-      }
-    }
+    results[sentence[i]].push(i);
   }
+
   return results;
 };
 
