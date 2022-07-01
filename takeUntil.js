@@ -5,10 +5,9 @@ const takeUntil = function(array, callback) {
     // if callback(item) is truthy, stop looping and return our results array
     if (callback(item)) {
       return results;
-    // if callback(item) is falsy, push item into results array and continue to loop through array 
-    } else {
-      results.push(item)
     }
+    // if callback(item) is falsy, push item into results array
+    results.push(item)
   } 
   return results;
 };
