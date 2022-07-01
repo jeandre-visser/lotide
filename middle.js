@@ -23,14 +23,16 @@ const middle = function(arr) {
 
   if (arr.length <= 2) {
     return [];
-
-  } else if (arr.length % 2 === 0) {
-    return [arr[midNum - 1], arr[midNum]]
-
-  } else {
-      return [arr[midNum]];
   }
+  if (arr.length % 2 === 0) {
+    return [arr[midNum - 1], arr[midNum]]
+  }
+    return [arr[midNum]];
 }
 
 
+// TEST CASES
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4])
+assertArraysEqual(middle([1, 2]), [])
+assertArraysEqual(middle([1, 2, 3, 4, 5]), [3])
 
