@@ -1,17 +1,21 @@
 const words = ["ground", "control", "to", "major", "tom"];
 
+
 const map = function(array, callback) {
   const results = [];
+  // loops through each item of given array
   for(let item of array) {
+    // pushes output of callback into results array 
     results.push(callback(item))
   }
   return results;
 }
 
+// calls upon our map function
 const results1 = map(words, word => word[0]);
 console.log(results1);
 
-
+// eqArrays function
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
@@ -24,6 +28,7 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
+// assertArraysEqual function
 const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1, arr2)) {
     return console.log(`✅Assertion Passed: ${arr1} === ${arr2}`);
