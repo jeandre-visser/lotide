@@ -1,9 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return console.log(`✅Assertion Passed: ${actual} === ${expected}`);
-  }
-  return console.log(`❌Assertion Failed: ${actual} !== ${expected}`); 
-};
+const assertEqual = require("./assertArraysEqual");
 
 const tail = function(arr) {
   // if array length is greater than 2, slice off the first item and return the "tail" of the array, otherwise return an empty array
