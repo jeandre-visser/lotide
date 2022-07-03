@@ -12,3 +12,5 @@ assertEqual('My name is Jeandre', 'My name is Jeandre');
 assertEqual('It is a nice day', 'It is a Nice day');
 assertEqual(42, 42);
 assertEqual(1, 10);
+
+module.exports = assertEqual;
