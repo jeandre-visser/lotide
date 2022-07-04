@@ -1,7 +1,3 @@
-const eqArrays = require("./eqArrays");
-
-const assertArraysEqual = require("./assertArraysEqual");
-
 const middle = function(arr) {
   // determine middle of array, rounding down to nearest integer
   const midNum = Math.floor(arr.length / 2);
@@ -17,9 +13,7 @@ const middle = function(arr) {
     return [arr[midNum]];
 }
 
+module.exports = middle;
 
-// TEST CASES
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4])
-assertArraysEqual(middle([1, 2]), [])
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3])
+
 
