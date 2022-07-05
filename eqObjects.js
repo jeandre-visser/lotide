@@ -1,3 +1,4 @@
+const eqArrays = require('./eqArrays');
 
 const eqObjects = function(obj1, obj2) {
   // obtain key arrays using Object.keys
@@ -17,6 +18,7 @@ const eqObjects = function(obj1, obj2) {
   }
   return true;
 };
+
 
 
 
