@@ -1,8 +1,3 @@
-const eqArrays = require("./eqArrays");
-
-const assertArraysEqual = require("./assertArraysEqual");
-
-
 const letterPositions = function(sentence) {
   const results = {};
   // splits up sentence into letters and each letter is input into an array
@@ -17,11 +12,5 @@ const letterPositions = function(sentence) {
   return results;
 };
 
+module.exports = letterPositions;
 
-// TEST CODES
-console.log(letterPositions("hello"));
-
-assertArraysEqual(letterPositions("hello").h, [0]);
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("hello").l, [2, 3]);
-assertArraysEqual(letterPositions("hello").o, [4]);
